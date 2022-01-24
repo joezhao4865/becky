@@ -14,6 +14,20 @@ router.post('/', function(req, res, next){
 		
 		request.execute('get_wl_info').then((result) => {
 			sql.close()
+			var indexedResult = result.recordset.map( (v, i) => ({...v, idx: i}));			
+			var groupedResult = indexedResult.filter(v => v.procedure_code == 'T1019').reduce((start,v)=>{
+				let key = v.service_date.toISOString().substring(0,10)
+				if(key in start) {start[key].push(v);}
+				else {start[key] = []; start[key].push(v)}
+				return start
+			}, {})
+			
+			Object.keys(groupedResult).forEach(key => {
+				if (groupedResult[key].length > 1){					
+					groupedResult[key].forEach(v => result.recordset[v.idx].flagged = true)
+				}
+			})
+			
 			res.json({
 				data: {
 						details: result.recordset,

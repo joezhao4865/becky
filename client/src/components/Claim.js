@@ -69,7 +69,7 @@ const Claim = () => {
 								clientDetails.details.map( (v,i) => <tr key={'details_'+i}>
 									<td>{v.pca_first_name}</td>
 									<td>{v.pca_last_name}</td>
-									<td>{v.procedure_code}</td>
+									<td style={v.flagged ? {color:'yellow'} : {}}>{v.procedure_code}</td>
 									<td>{v.service_date.substring(0,10)}</td>
 									<td style={v.procedure_code == 'T1019' ? {color:'red'} : {color: 'white'}}>{v.billable_units}</td>
 									<td>{v.calculated_hours}</td>

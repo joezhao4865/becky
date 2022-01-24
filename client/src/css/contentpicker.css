@@ -1,0 +1,11 @@
+.active{
+	color: yellow;
+	border: 1px solid yellow;
+	border-radius: 5px;
+}
+
+.nav-header:hover {
+	cursor: pointer;
+	border: 1px solid yellow;
+	border-radius: 5px;
+}

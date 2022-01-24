@@ -1,0 +1,15 @@
+.app {
+  position: relative;
+  width: 98%;
+}
+
+.app table{
+	position: relative;
+	margin: auto;
+}
+
+.app-header {
+  position: relative;
+  border-bottom: 1px solid white;
+  width: 100%;
+}

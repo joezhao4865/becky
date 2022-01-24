@@ -1,0 +1,49 @@
+.white {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.right{
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+select, input{
+	background: none;
+	color: white;
+	background: none;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	border-radius: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+
+select:hover, input:hover{
+	background: none;
+	border-bottom: 1px solid orange;
+}
+
+select:hover, select:focus, input:focus{
+	background: none;
+	border-bottom: 1px solid  #e6e6ff;
+	color: white;
+	box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+	outline: none;
+}
+
+
+
+::placeholder{
+	color: white;
+}

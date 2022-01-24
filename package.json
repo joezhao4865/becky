@@ -1,0 +1,26 @@
+{
+  "name": "becky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "html-pdf": "^3.0.1",
+    "msnodesqlv8": "^2.2.0",
+    "mssql": "^7.2.1",
+    "node-excel-export": "^1.4.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

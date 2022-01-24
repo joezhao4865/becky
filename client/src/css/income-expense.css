@@ -1,0 +1,16 @@
+.income{
+	color: #33ff33;
+}
+
+
+.expense{
+	color: yellow;
+}
+
+.profit-expected, .profit-real, .balancing{
+	color: #ff80ff;
+}
+
+.negative{
+	color: red;
+}

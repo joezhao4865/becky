@@ -16,7 +16,7 @@ const Router = () => <BrowserRouter>
 			<Route path='/claims' element={<Claim />} />
 			<Route path='/invoice' element={<Invoice />} />
 			<Route path='/quickbook' element={<Quickbook />} />
-				{/*	<Route path='/income-expense' element={ReportSearch} />
+					{/*<Route path='/income-expense' element={ReportSearch} />
 			</Route> */}
 		</Routes>
 	</BrowserRouter>

@@ -7,11 +7,13 @@ import Navbar from './Navbar';
 import Payroll from './Payroll';
 import Invoice from './Invoice';
 import Claim from './Claim';
+import Payments from './Payments';
 
 const Router = () => <BrowserRouter>
 		<Navbar />
 		<Routes>	
 			<Route path='/' element={<Home />} />
+			<Route path='/payments' element={<Payments />} />
 			<Route path='/payroll' element={<Payroll />} />
 			<Route path='/claims' element={<Claim />} />
 			<Route path='/invoice' element={<Invoice />} />

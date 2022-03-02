@@ -10,6 +10,7 @@ var invoiceRouter = require('./routes/invoice');
 var profitLossRouter = require('./routes/profit-loss');
 var reportRouter = require('./routes/reports');
 var claimRouter = require('./routes/claims');
+var paymentRouter = require('./routes/payments');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -25,7 +26,7 @@ app.use('/invoice', invoiceRouter);
 app.use('/reports', reportRouter);
 app.use('/profit-loss', profitLossRouter);
 app.use('/claims', claimRouter);
-
+app.use('/payments', paymentRouter);
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

@@ -14,8 +14,8 @@ const Navbar = () => <div className="app-header">
 		</button>
 		<div className="navbar-collapse collapse" id="navbar">
 			<ul className="navbar-nav">
-				<li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
-				<li className="nav-item"><Link to="/claims" className="nav-link">Claims</Link></li>
+				<li className="nav-item"><Link to="/" className="nav-link">Claims</Link></li>
+				<li className="nav-item"><Link to="/payments" className="nav-link">Payments</Link></li>
 				<li className="nav-item"><Link to="/payroll" className="nav-link">Pay Roll</Link></li>
 				<li className="nav-item"><Link to="/invoice" className="nav-link">Invoice</Link></li>
 				<li className="nav-item"><Link to="/quickbook" className="nav-link">Quick Book</Link></li>

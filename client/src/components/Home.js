@@ -1,8 +1,7 @@
 import React from 'react';
-import Searchbox from './Searchbox';
-
+import ClaimPicker from './ClaimPicker';
 const Home = () => <div className="mt-4"> 
-	  <Searchbox />
+	  <ClaimPicker />
 	</div>
 
 export default Home

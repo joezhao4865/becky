@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import VisitList from './VisitList'
-import '../css/searchbox.css'
 
-const Searchbox = (props) => {
-	const [pcafname, setPcafname] = useState('')
-	const [pcalname, setPcalname] = useState('')
-	const [recifname, setRecifname] = useState('')
-	const [recilname, setRecilname] = useState('')
-	const [startdate, setStartdate] = useState('')
-	const [enddate, setEnddate] = useState('')
-	const [results, setResults] = useState([])
-	const [payer, setPayer] = useState('')
-	const [showResult, setShowResult] = useState(false)
-	const [startdatefocus, setStartdatefocus] = useState(false)
-	const [enddatefocus, setEnddatefocus] = useState(false)
-	
+const Searchbox = ({
+		pcafname, setPcafname,
+		pcalname, setPcalname,
+		recifname, setRecifname,
+		recilname, setRecilname,
+		startdate, setStartdate,
+		enddate, setEnddate,
+		results, setResults,
+		payer, setPayer,
+		showResult, setShowResult,
+		startdatefocus, setStartdatefocus,
+		enddatefocus, setEnddatefocus
+	}) => {
+
 	const startSearch = () => {
 		fetch('/visits', {
 			body: JSON.stringify({recifname, recilname, pcafname, pcalname, startdate, enddate, payer}),

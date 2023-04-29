@@ -63,8 +63,8 @@ router.post('/saveClaim', (req, res) => {
 	var body = req.body
 	var startDate = body.startdate
 	var endDate = body.enddate
-	var querystr = 'insert corrupted_visits(visitId, claim_status, pca_first_name, pca_last_name, recipient_first_name, recipient_last_name,procedure_code, service_date, end_date, invoice_date, payer_code, calculated_amount, billable_amount, paid_amount, remarks) values ('
-	querystr = querystr + "'" + body.visitid +"', '" + body.status + "', '" + body.pfname + "', '" + body.plname +"', '" + body.rfname+"', '" + body.rlname + "', '" + body.proc +"', '" + body.startdate + "', '"+body.enddate + "', '" + body.invoicedate + "', '" +body.payer +"', '" + body.calculated + "', '" + body.billable + "', '" + body.paid + "', '" + body.remark + "')"
+	var querystr = 'insert livein_visits(visitId, claim_status, pca_first_name, pca_last_name, recipient_first_name, recipient_last_name, medicaid_id, procedure_code, service_date, end_date, invoice_date, payer_code, calculated_amount, billable_amount, paid_amount, remarks) values ('
+	querystr = querystr + "'" + body.visitid +"', '" + body.status + "', '" + body.pfname + "', '" + body.plname +"', '" + body.rfname+"', '" + body.rlname + "', " + "'', '" + body.proc +"', '" + body.startdate + "', '"+body.enddate + "', '" + body.invoicedate + "', '" +body.payer +"', '" + body.calculated + "', '" + body.billable + "', '" + body.paid + "', '" + body.remark + "')"
 	
 	sql.connect(config)
 		.then(pool => pool.query(querystr))

@@ -12,10 +12,20 @@ const Searchbox = ({
 		payer, setPayer,
 		showResult, setShowResult,
 		startdatefocus, setStartdatefocus,
-		enddatefocus, setEnddatefocus
+		enddatefocus, setEnddatefocus,
+		functionGroup
 	}) => {
 
 	const startSearch = () => {
+		fetch('/visits', {
+			body: JSON.stringify({recifname, recilname, pcafname, pcalname, startdate, enddate, payer}),
+			headers: { 'content-type': 'application/json' },
+			method: 'POST',
+		}).then(res => {if(res.status === 200) return res.json()})
+		  .then(json => { setResults(json.allVisits);setShowResult(true)})
+	}
+	
+	const searchDenials = () => {
 		fetch('/visits', {
 			body: JSON.stringify({recifname, recilname, pcafname, pcalname, startdate, enddate, payer}),
 			headers: { 'content-type': 'application/json' },
@@ -82,7 +92,7 @@ const Searchbox = ({
 			</select>
 		</div>
 		<div className="col-md-3 searchfield">
-			<button className="btn btn-sm btn-primary form-control" onClick={startSearch}>Search</button>
+			<button className="btn btn-sm btn-primary form-control" onClick={functionGroup == 'Searchbox' ? startSearch : searchDenials}>Search</button>
 		</div>
 		{
 			showResult ?
